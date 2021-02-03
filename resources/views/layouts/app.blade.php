@@ -9,26 +9,34 @@
 
         <title>{{ page_title($title ?? null) }}</title>
 
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
-    
+        
+        
+        
+        @if(!Route::is('login'))
         <!-- Styles -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+            <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <!-- Scripts -->
+            <script src="{{ asset('js/app.js') }}" defer></script>
+        @endif
+        @if(Route::is('login'))
+        <!-- Styles -->
+            <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <!-- Scripts -->
+            <script src="{{ asset('js/login.js') }}" defer></script>
+        @endif
 
-
+        <!-- font awasom -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
     </head>
-    <body class="container">
+    <body class="">
         <div id="app">
-            <main class="py-4">
+            
                 @yield('content')
-            </main>
+          
 
             <footer class="">
-                &copy; Copyright {{ date('Y') }} 
-     
-                 @if(!Route::is('accueil'))
-                     &middot; <a href="#" class="">About Us</a>
-                 @endif
+                
             </footer>
         </div>
     </body>

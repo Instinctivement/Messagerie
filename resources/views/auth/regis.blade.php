@@ -10,4 +10,9 @@
     <p><a href="{{ route('login') }}">log</a></p>
     <p><a href="{{ route('accueil') }}">Accueil</a></p>
 
+    
+
+    <p><a href="{{ route('inscription') }}">Inscription</a></p>
+    <p><a href="{{ route('accueil') }}">accueil</a></p>
+
 @endsection 
