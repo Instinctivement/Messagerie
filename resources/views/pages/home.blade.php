@@ -23,13 +23,9 @@
                 @include('pages.right', ['status' => 'complete'])
            </div>
         </div>
-   
     </div>
 
     <div class="overlay"></div>
-
-
-    
 
     @include('modals.theme', ['status' => 'complete'])
 
